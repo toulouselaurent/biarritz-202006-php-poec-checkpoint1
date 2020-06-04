@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto+Mono&display=swap');
+
+:root {
+    --dark: rgba(18, 18, 18, 0.62);
+    --light: #f5f5f5;
+    --shadow: rgba(20, 20, 20, 0.9);
+    --paper: #e6dfad;
+    --paper-dark: #c7c196;
+    --error: indianred;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    margin:0;
+    box-sizing: border-box;
+    font-size: 16pt;
+    font-family: 'Roboto Mono', monospace;
+    background-color: black;
+}
+
+.overlay {
+    background-color: var(--dark);
+    padding: 0.5em;
+}
+
+ul.error {
+    background-color: var(--error);
+    padding: 1em;
+}
+
+ul.error:empty {
+    display: none;
+}
+.navbar {
+    background-color: var(--dark);
+    padding: 15px;
+    color: var(--light);
+    font-family: 'Monoton', cursive;
+    display: flex;
+    align-items: center;
+    position:fixed;
+    z-index: 2;
+    width: 100vw;
+}
+
+.navbar a {
+    color: var(--light);
+    text-decoration: none;
+    padding-left: 1em;
+}
+
+.navbar a:hover {
+    text-shadow: 1px 1px 1px var(--light);
+}
+
+.navbar .logo {
+    width: 50px;
+    filter:sepia(70%);
+}
+
+code {
+    background-color: var(--dark);
+    color: var(--light);
+    padding:1px;
+    font-style: italic;
+    border-radius: 2px;
+}
+
+h3 {
+    margin-top:3em;
+}

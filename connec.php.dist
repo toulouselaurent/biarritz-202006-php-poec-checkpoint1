@@ -1,0 +1,4 @@
+<?php
+define("DSN", "mysql:host=localhost;dbname=checkpoint1");
+define("USER", "your_username");
+define("PASS", "your_password");

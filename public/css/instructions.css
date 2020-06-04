@@ -1,0 +1,145 @@
+.context {
+    background-color: var(--dark);
+    background-image: url("../image/bar.jpeg");
+    filter: sepia(80%);
+    padding: 2em;
+    padding-top: 3em;
+    color:var(--light);
+    background-blend-mode: soft-light;
+}
+
+.picture {
+    background-color: var(--light);
+    padding: 15px;
+    transform: rotate(5deg);
+    object-fit: cover;
+    width: 300px;
+    margin:0.5em;
+    float: right;
+    text-align: center;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
+
+.picture img {
+    width: 100%;
+}
+
+.picture figcaption {
+    color: var(--dark);
+}
+
+.instructions {
+    display: flex;
+    background-color: black;
+    background-image: url("../image/typewriter.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    width: 100%;
+    filter:sepia(40%);
+    font-size: 16pt;
+}
+
+.instructions h2 {
+    padding-top: 1em;
+    padding-left: 1em;
+    color: var(--light);
+}
+
+.instructions article {
+    padding:2em;
+    margin:2em;
+    background-color: white;
+    background-image: url("../image/paper.png");
+    background-blend-mode: multiply;
+    width: 60%;
+    transform: rotateZ(-3deg);
+    filter:sepia(80%);
+    min-height: 800px;
+    box-shadow: 1px 1px 5px var(--shadow);
+    counter-set: instructions;
+}
+
+.instructions ol {
+    list-style-type: none;
+}
+.instructions li {
+    counter-increment: instructions;
+    padding: 0.5em;
+}
+
+.instructions li::before {
+    content: counter(instructions) '. ';
+}
+
+.instructions li:hover {
+    background-color: var(--paper-dark);
+}
+
+.instructions article.bonus {
+    position: absolute;
+    z-index: -1;
+    top:150px;
+    left: 20px;
+    transform: rotateZ(2deg);
+}
+
+.seeBonus, .closeBonus {
+    position: absolute;
+    top:1em;
+    right: 1em;
+    padding-left:2em;
+    padding-bottom:2em;
+    text-decoration: none;
+}
+
+
+
+.closeBonus {
+    display: none;
+}
+
+.instructions article.bonus:target {
+    animation: pageSlide 1s;
+    animation-fill-mode: forwards;
+}
+
+.instructions article.bonus:target .seeBonus {
+    display: none;
+}
+.instructions article.bonus:target .closeBonus {
+    display: block;
+}
+
+
+
+@keyframes pageSlide {
+    50% {
+        left:calc(20px + 60%);
+    }
+
+    100% {
+        z-index: 1;
+        left: 20px;
+    }
+}
+
+
+.thumbnail {
+    width: 100%;
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+}
+
+.thumbnail img {
+    width: 30%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+
+
+.ness {
+    margin-top:2em;
+}
