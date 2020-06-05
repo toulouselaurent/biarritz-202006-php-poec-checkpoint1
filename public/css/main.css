@@ -70,3 +70,11 @@ code {
 h3 {
     margin-top:3em;
 }
+
+.error{
+    text-align: center;
+    padding:20px;
+    border-radius:4px;
+    border:1px solid red;
+    background:tomato;
+}
